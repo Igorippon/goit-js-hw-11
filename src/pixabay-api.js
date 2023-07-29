@@ -5,7 +5,7 @@ export { serviceSearch };
 axios.defaults.baseURL = "https://pixabay.com";
 const API_KEY = '38388724-3028317b25cafc6eb54d82d41';
 
-async function serviceSearch(searchQueryValue, page) {
+async function serviceSearch(searchQueryValue, page, per_page) {
     const params = new URLSearchParams({
         key: API_KEY,
         q: searchQueryValue,

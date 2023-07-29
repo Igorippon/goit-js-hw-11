@@ -53,7 +53,6 @@ async function handlerPagination(entries, observer) {
             if (entry.isIntersecting) {
                  Notiflix.Loading.standard();
                 page += 1;
-                console.log(page);
                 const { hits, totalHits } = await serviceSearch(searchQueryValue, page);
                  Notiflix.Loading.remove();
                 refs.images.insertAdjacentHTML('beforeend', createMarkup(hits));
